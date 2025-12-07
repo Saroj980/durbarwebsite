@@ -1,0 +1,94 @@
+.event-subtitle {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--bs-primary);
+  position: relative;
+}
+
+.event-subtitle::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--bs-primary);
+  display: block;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+
+/* Event Cards */
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.15);
+}
+
+.event-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.1);
+}
+
+.event-body h5 {
+  font-size: 1.2rem;
+}
+
+.event-meta p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Badge styles */
+.event-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 600;
+}
+
+.event-badge.upcoming {
+  background: var(--bs-success);
+}
+
+.event-badge.completed {
+  background: var(--bs-secondary);
+}
+
+/* Completed card styling */
+.completed-card {
+  opacity: 0.85;
+}
+
+.completed-card:hover {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+.event-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+

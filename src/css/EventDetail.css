@@ -1,0 +1,79 @@
+/* ---------------- HERO ---------------- */
+.event-detail-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 120px;
+  color: white;
+  text-align: center;
+}
+
+/* Title */
+.event-detail-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* META BAR */
+.event-meta-bar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 650px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* LOCATION */
+.event-location {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 10px !important;
+}
+
+/* ---------------- CONTENT ---------------- */
+.event-detail-content {
+  background: #f5f8ff;
+}
+
+.event-description {
+  border-radius: 14px;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-left: 5px solid var(--bs-primary);
+}
+
+.event-description h3 {
+  color: var(--bs-primary);
+}
+
+.event-description h5 {
+  color: var(--bs-primary);
+}
+
+.details-box p {
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-meta-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-detail-hero h1 {
+    font-size: 2rem;
+  }
+}

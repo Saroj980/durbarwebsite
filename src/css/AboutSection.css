@@ -1,0 +1,146 @@
+/* --- Modern About Section --- */
+.about-modern-section {
+  /* background: linear-gradient(to right, #ffffff 0%, #f8fafc 100%); */
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+/* Soft floating background shapes */
+.about-modern-section::before,
+.about-modern-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 1;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.about-modern-section::before {
+  top: -100px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  /* background: var(--bs-primary); */
+}
+
+.about-modern-section::after {
+  bottom: -120px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  /* background: var(--bs-info); */
+}
+
+/* Keyframes for gentle floating motion */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(5deg);
+  }
+}
+
+/* --- Text Content --- */
+.about-content {
+  position: relative;
+  z-index: 3;
+  padding-right: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+/* --- Image Wrapper --- */
+.about-image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.6s ease;
+  z-index: 3;
+}
+
+.about-image-wrapper:hover {
+  transform: scale(1.03);
+}
+
+/* --- Image Styling --- */
+.about-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* --- Overlay Gradient --- */
+.about-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 126, 167, 0.6),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-image-overlay {
+  opacity: 0.8;
+}
+
+/* --- Overlay Text --- */
+.about-overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: #fff;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.about-overlay-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.about-overlay-text p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.about-image-wrapper:hover .about-overlay-text {
+  transform: translateY(-6px);
+  opacity: 0.95;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+  .about-image {
+    height: 320px;
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-overlay-text {
+    bottom: 15px;
+    left: 15px;
+    text-align: left;
+  }
+
+  .about-modern-section::before,
+  .about-modern-section::after {
+    display: none;
+  }
+}

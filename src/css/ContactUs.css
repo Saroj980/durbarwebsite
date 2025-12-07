@@ -1,0 +1,50 @@
+.contact-page {
+  background: #f7faff;
+  min-height: 100vh;
+}
+
+/* ---------------- CONTACT INFO CARD ---------------- */
+.contact-info-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.info-item .info-icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: var(--bs-primary);
+}
+
+/* ---------------- CONTACT FORM ---------------- */
+.contact-form-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.15rem rgba(0,123,255,0.2);
+}
+
+/* ---------------- MAP ---------------- */
+.map-section {
+  padding-bottom: 40px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .contact-info-card,
+  .contact-form-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,196 @@
+/* ----------------------------- HERO SECTION ----------------------------- */
+
+/* .about-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.55)
+    )
+    url("/hero-about.jpg") center/cover no-repeat;
+  padding: 120px 0;
+  color: white;
+  position: relative;
+} */
+.about-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  color: white;
+  position: relative;
+}
+
+
+.about-hero h1 {
+  letter-spacing: 1px;
+}
+
+.about-hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* ----------------------------- ABOUT MAIN SECTION ----------------------------- */
+
+.about-title {
+  font-size: 2rem;
+  background: linear-gradient(90deg, var(--bs-primary), #00b4d8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.underline {
+  height: 4px;
+  width: 90px;
+  background: var(--bs-primary);
+  margin: 10px 0 20px 0;
+}
+
+.about-text p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 380px;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.06);
+}
+
+/* ----------------------------- VISION / MISSION / OBJECTIVES ----------------------------- */
+
+.vmo-section {
+  background: #f6fbfe;
+}
+
+.vmo-card {
+  background: color-mix(in srgb, var(--bs-primary) 12%, white);
+  padding: 25px;
+  border-radius: 14px;
+  min-height: 260px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.vmo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.vmo-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  margin-bottom: 12px;
+}
+
+.section-heading span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bs-primary);
+  position: relative;
+}
+
+.section-heading span::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: var(--bs-primary);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* Wrapper for natural flowing text */
+.about-wrapper {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Floating image - Word-style wrap */
+.about-float-img {
+  float: right;
+  width: 45%;
+  max-width: 420px;
+  margin: 0 0 20px 30px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Improve readability */
+.about-wrapper p {
+  margin-bottom: 1.1rem;
+  text-align: justify;
+}
+
+/* Ensure title stays above image */
+.about-title {
+  margin-top: 0.5rem;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .about-float-img {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+    display: block;
+  }
+}
+
+/* =========================== VMO SECTION =========================== */
+.vmo-block {
+  padding: 40px 0;
+}
+
+.vmo-header {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--bs-primary);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.vmo-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: var(--bs-primary);
+  border-radius: 4px;
+}
+
+.vmo-content {
+  padding-left: 18px;
+  border-left: 4px solid var(--bs-primary);
+}
+
+.vmo-content p {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* section background alternation */
+.vmo-block:nth-child(odd) {
+  background: #f7f9fc;
+}
+
+.vmo-block:nth-child(even) {
+  background: #ffffff;
+}

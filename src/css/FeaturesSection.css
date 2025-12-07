@@ -1,0 +1,102 @@
+.features-gradient-section {
+  /* background: radial-gradient(circle at top left, #007ea7, #003e58); */
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-gradient-title {
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
+  background: var(--bs-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-gradient-card {
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.feature-gradient-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.icon-circle {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.feature-gradient-card:hover .icon-circle {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.floating-shape {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(179, 44, 44, 0.15), transparent);
+  filter: blur(50px);
+  z-index: 99;
+  animation: float 8s infinite ease-in-out alternate;
+}
+
+.shape1 {
+  top: 10%;
+  left: 10%;
+}
+
+.shape2 {
+  bottom: 15%;
+  right: 10%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-gradient-card {
+    text-align: center;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #007ea7, #00b4d8, #48cae4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #00b4d8, #90e0ef);
+  margin: 10px auto 0;
+}

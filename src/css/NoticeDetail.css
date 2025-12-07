@@ -1,0 +1,26 @@
+.notice-detail {
+  max-width: 900px;
+}
+
+.notice-full-image {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+}
+
+.file-preview {
+  border-radius: 12px;
+  border: 1px dashed #ccc;
+}
+
+.notice-detail-badge {
+  background: var(--bs-danger);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 10px;
+}

@@ -1,0 +1,56 @@
+/* Modern Tabs */
+.about-admin-tabs .nav-link {
+  border: 0 !important;
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 30px;
+  color: var(--bs-primary) !important;
+  background: #f1f3f7;
+  transition: 0.3s;
+}
+
+.about-admin-tabs .nav-link:hover {
+  background: rgba(var(--bs-primary-rgb), 0.15);
+  color: var(--bs-primary);
+}
+
+.about-admin-tabs .nav-link.active {
+  background: var(--bs-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Array Item Card */
+.array-item-card {
+  background: #f8f9fc;
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid #e6e9ef;
+  transition: 0.25s;
+  position: relative;
+}
+
+.array-item-card:hover {
+  border-color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), 0.06);
+}
+
+.array-remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: 0;
+  background: #e63946;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.array-remove-btn:hover {
+  background: #c53030;
+}

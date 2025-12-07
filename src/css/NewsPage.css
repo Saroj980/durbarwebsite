@@ -1,0 +1,316 @@
+/* ---- Page Title ---- */
+.section-heading-modern span {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--bs-primary);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-heading-modern span::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--bs-primary);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* ---- News Card ---- */
+.news-card-link {
+  text-decoration: none !important;   /* REMOVE UNDERLINE */
+  color: inherit;
+}
+
+.news-card-modern {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.news-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(0, 126, 167, 0.28);
+}
+
+.news-img-box {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.news-card-modern:hover .news-img {
+  transform: scale(1.08);
+}
+
+/* ---- NEW Badge ---- */
+.badge-new-modern {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  background: rgba(255, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ---- Title ---- */
+.news-title-modern {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* ---- Date ---- */
+.news-date-modern {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* ---- Summary ---- */
+.news-summary-modern {
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 50px;
+}
+
+/* ---- Read More ---- */
+.news-readmore-modern {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--bs-primary);
+  transition: 0.3s ease;
+}
+
+.news-readmore-modern:hover {
+  letter-spacing: 1px;
+}
+
+/* ---------------- TRENDING SIDEBAR ---------------- */
+
+.trending-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.trending-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--bs-primary);
+  border-left: 4px solid var(--bs-primary);
+  padding-left: 12px;
+}
+
+.trending-item-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.trending-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.trending-item:hover {
+  background: rgba(0,126,167,0.08);
+  transform: translateX(4px);
+}
+
+.trending-thumb {
+  width: 70px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.trending-content h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #222;
+}
+
+.trending-date {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Trending Badge */
+.badge-trending-modern {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,80,0,0.9);
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(3px);
+}
+
+
+/* ----------------------------------------------
+      FEATURED MAGAZINE STYLE UI
+----------------------------------------------- */
+
+.featured-main-heading {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--bs-primary);
+  margin-bottom: 20px;
+}
+
+/* Entire Card */
+.featured-modern-card {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.featured-modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Left Image */
+.featured-modern-image-wrapper {
+  position: relative;
+  width: 48%;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.featured-modern-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.featured-modern-card:hover .featured-modern-image {
+  transform: scale(1.06);
+}
+
+/* Featured Chip */
+.featured-chip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(90deg, #ffcc00, #ff9d00);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  z-index: 3;
+}
+
+/* Right Content */
+.featured-modern-content {
+  padding: 25px;
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-modern-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.featured-modern-date {
+  font-size: 0.9rem;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.featured-modern-summary {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.featured-modern-readmore {
+  color: var(--bs-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.featured-modern-readmore:hover {
+  padding-left: 5px;
+}
+
+/* ----------------------------------------------
+          Responsive
+----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .featured-modern-card {
+    flex-direction: column;
+  }
+
+  .featured-modern-image-wrapper,
+  .featured-modern-content {
+    width: 100%;
+  }
+
+  .featured-modern-image-wrapper {
+    height: 230px;
+  }
+}
+
+/* REMOVE underline from featured wrapper */
+.featured-modern-section *,
+.featured-modern-section a,
+.featured-modern-section h2,
+.featured-modern-section h3,
+.featured-modern-section p {
+  text-decoration: none !important;
+}
+
+/* REMOVE any leftover pseudo underlines */
+.featured-modern-section *::after,
+.featured-modern-section *::before {
+  content: none !important;
+}

@@ -1,0 +1,54 @@
+/* src/admin/css/AdminSchoolInfo.css */
+.admin-school-info .preview-box {
+  width: 120px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.admin-school-info .preview-box img { width: 100%; height: 100%; object-fit: contain; }
+
+/* banner preview */
+.admin-school-info .banner-preview {
+  width: 220px;
+  height: 90px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.admin-school-info .banner-preview img { width:100%; height:100%; object-fit:cover; }
+
+/* officer photo */
+.admin-school-info .officer-photo-preview {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.admin-school-info .officer-photo-preview img { width:100%; height:100%; object-fit:cover; }
+
+.admin-school-info .placeholder,
+.admin-school-info .placeholder-sm {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6c757d;
+  width:100%;
+  height:100%;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .admin-school-info .preview-box { width: 90px; height: 50px; }
+  .admin-school-info .banner-preview { width: 100%; height: 70px; }
+}
