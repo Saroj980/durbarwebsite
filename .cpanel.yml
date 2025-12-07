@@ -1,13 +1,27 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home8/thedurbarschoole/public_html/
+    - export PROJECTPATH=/home8/thedurbarschoole/repositories/durbarwebsite
+    - export DEPLOYPATH=/home8/thedurbarschoole/public_html
+
+    # Go to project directory
+    - cd $PROJECTPATH
+
     - echo "Installing dependencies..."
-    - npm install
+    - /opt/cpanel/ea-nodejs20/bin/npm install
+
     - echo "Building React..."
-    - npm run build
-    - echo "Cleaning old files..."
-    - /bin/rm -rf $DEPLOYPATH/*
+    - /opt/cpanel/ea-nodejs20/bin/npm run build
+
+    - echo "Cleaning old frontend files but keeping backend..."
+    # Delete everything *except* api, api-backend, .htaccess
+    - find $DEPLOYPATH -mindepth 1 -maxdepth 1 \
+        ! -name 'api' \
+        ! -name 'api-backend' \
+        ! -name '.htaccess' \
+        -exec rm -rf {} +
+
     - echo "Deploying new build..."
-    - /bin/cp -R build/* $DEPLOYPATH
+    - cp -R $PROJECTPATH/build/* $DEPLOYPATH/
+
     - echo "Deployment complete!"
