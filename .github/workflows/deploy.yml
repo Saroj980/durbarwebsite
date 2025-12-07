@@ -23,24 +23,36 @@ jobs:
       - name: Build React app (no ESLint)
         run: CI=false npm run build
 
-      - name: Debug Secrets
+      - name: Load FTP credentials from SECRET_VALUE
+        id: secrets_parser
         run: |
-          echo "FTP_HOST: ${{ secrets.FTP_HOST }}"
-          echo "FTP_USER: ${{ secrets.FTP_USER }}"
-          echo "FTP_PORT: ${{ secrets.FTP_PORT }}"
-          echo "DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}"
+          echo "Parsing secret..."
+          echo "${{ secrets.SECRET_VALUE }}" > secret.txt
 
+          # Extract values
+          export FTP_HOST=$(grep FTP_HOST secret.txt | cut -d '=' -f2)
+          export FTP_USER=$(grep FTP_USER secret.txt | cut -d '=' -f2)
+          export FTP_PASS=$(grep FTP_PASS secret.txt | cut -d '=' -f2)
+          export FTP_PORT=$(grep FTP_PORT secret.txt | cut -d '=' -f2)
+          export DEPLOY_PATH=$(grep DEPLOY_PATH secret.txt | cut -d '=' -f2)
+
+          # Set outputs
+          echo "host=$FTP_HOST" >> $GITHUB_OUTPUT
+          echo "user=$FTP_USER" >> $GITHUB_OUTPUT
+          echo "pass=$FTP_PASS" >> $GITHUB_OUTPUT
+          echo "port=$FTP_PORT" >> $GITHUB_OUTPUT
+          echo "path=$DEPLOY_PATH" >> $GITHUB_OUTPUT
 
       - name: Deploy Files via FTP (Safe Clean)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
+          server: ${{ steps.secrets_parser.outputs.host }}
+          username: ${{ steps.secrets_parser.outputs.user }}
+          password: ${{ steps.secrets_parser.outputs.pass }}
           protocol: ftp
-          port: ${{ secrets.FTP_PORT }}
+          port: ${{ steps.secrets_parser.outputs.port }}
           local-dir: build
-          server-dir: ${{ secrets.DEPLOY_PATH }}
+          server-dir: ${{ steps.secrets_parser.outputs.path }}
           exclude: |
             api/**
             api-backend/**
