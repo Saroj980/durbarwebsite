@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           protocol: ftp
           port: ${{ secrets.FTP_PORT }}
-          local-dir: build
+          local-dir: build/
           server-dir: ${{ secrets.DEPLOY_PATH }}
           exclude: |
             api/**
