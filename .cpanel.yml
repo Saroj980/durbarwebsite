@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home8/thedurbarschoole/public_html/
+    - echo "Installing dependencies..."
+    - npm install
+    - echo "Building React..."
+    - npm run build
+    - echo "Cleaning old files..."
+    - /bin/rm -rf $DEPLOYPATH/*
+    - echo "Deploying new build..."
+    - /bin/cp -R build/* $DEPLOYPATH
+    - echo "Deployment complete!"
