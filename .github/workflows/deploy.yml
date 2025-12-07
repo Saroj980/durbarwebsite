@@ -23,6 +23,13 @@ jobs:
       - name: Build React app (no ESLint)
         run: CI=false npm run build
 
+      - name: Debug Secrets
+        run: |
+          echo "FTP_HOST: ${{ secrets.FTP_HOST }}"
+          echo "FTP_USER: ${{ secrets.FTP_USER }}"
+          echo "FTP_PORT: ${{ secrets.FTP_PORT }}"
+          echo "DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}"
+
 
       - name: Deploy Files via FTP (Safe Clean)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
